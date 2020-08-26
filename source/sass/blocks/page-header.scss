@@ -1,0 +1,62 @@
+@import "../variables";
+@import "../mixins";
+
+
+.page-header {
+  background-color: $dark-blue;
+  margin-bottom: 0;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.page-header__svg {
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1px 0 0;
+  padding: 21px 0;
+
+  @media (min-width: $tablet) {
+    padding-top: 30px;
+    padding-bottom: 37px;
+  }
+
+  @media (min-width: $desktop) {
+    box-shadow: none;
+    padding: 0;
+    margin-top: 28px;
+    margin-left: 10px;
+  }
+}
+
+.page-header__logo {
+  margin-right: 180px;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin-right: 452px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
+}
+
+.page-header__close {
+  @include button-styles-reset;
+}

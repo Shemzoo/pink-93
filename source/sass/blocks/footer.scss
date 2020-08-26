@@ -1,0 +1,164 @@
+@import "../variables";
+@import "../mixins";
+
+
+.footer {
+  display: none;
+
+
+  @media (min-width: $tablet) {
+    display: block;
+    width: 100%;
+  }
+
+
+  @media (min-width: $desktop) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.footer__social-list {
+  @include list-styles-reset;
+  display: flex;
+
+
+  @media (max-width: 559px) {
+    justify-content: space-between;
+    width: 188px;
+    margin: 0 auto;
+    margin-top: 36px;
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 172px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    width: 190px;
+    margin-right: 34px;
+  }
+}
+
+.footer__item {
+  border: 2px solid #f2f2f2;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-right: 5px;
+}
+
+.footer__item svg {
+  fill: #d22856;
+}
+
+.footer__twitter-svg {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.footer__facebook-svg {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+}
+
+.footer__youtube-svg {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.footer__container {
+  @media (max-width: $tablet) {
+    width: 240px;
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 40px;
+    text-align: center;
+    align-items: center;
+  }
+
+  @media (min-width: $tablet) {
+    width: 620px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 38px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 46px;
+    width: 950px;
+    margin: auto;
+    padding-left: 10px;
+  }
+}
+
+.footer__copyright-wrapper {
+  @media (max-width: $tablet) {
+    width: 135px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    width: 174px;
+  }
+
+  display: flex;
+}
+
+.footer__copyright-logo {
+  fill: #d22856;
+  padding-top: 5px;
+
+  @media (max-width: $tablet) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 36px;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100px;
+    height: 48px;
+    margin-left: 25px;
+  }
+}
+
+.footer__copyright-text {
+  width: 86px;
+  height: 15px;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: left;
+  color: #283645;
+  text-decoration: none;
+  margin-right: 14px;
+
+  @media (min-width: $tablet) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+  }
+}
+
+.footer--photo {
+  display: block;
+}
+
+.footer__logo {
+  @media (min-width: $desktop) {
+    margin-right: 45px;
+  }
+}

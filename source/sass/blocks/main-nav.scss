@@ -1,0 +1,58 @@
+@import "../variables";
+@import "../mixins";
+
+.main-nav__list-item a {
+  color: white;
+  font-size: 18px;
+  font-family: "OpenSansBold", "Arial", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $desktop) {
+    font-family: "OpenSans", "Arial", sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 32px;
+    text-transform: none;
+    font-weight: 400;
+  }
+}
+
+.main-nav__list {
+  @include list-styles-reset;
+  margin-bottom: 0;
+
+  @media (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.main-nav__list-item {
+  padding: 22px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1px 0 0;
+
+  @media (min-width: $desktop) {
+    padding: none;
+    box-shadow: none;
+    margin-right: 80px;
+  }
+}
+
+.main-nav {
+  @media (min-width: $desktop) {
+    margin-top: 13px;
+    margin-left: 172px;
+  }
+}
+
+.main-nav__list-item:last-child {
+  border-bottom: 1px solid black;
+
+  @media (min-width: $desktop) {
+    border-bottom: none;
+    margin-right: 0;
+  }
+}

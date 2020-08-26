@@ -1,0 +1,142 @@
+@import "../variables";
+@import "../mixins";
+
+.contacts {
+  position: relative;
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.contacts::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bg-triangle-white-footer.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  top: 113%;
+  left: 0;
+  z-index: 10;
+
+  @media (min-width: $tablet) {
+    top: 110%;
+  }
+
+  @media (min-width: $desktop) {
+    top: 100%;
+  }
+}
+
+.contacts__content {
+  @include list-styles-reset;
+
+  @media (max-width: $tablet) {
+    align-items: center;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.contacts__item:nth-child(3) {
+  @media (min-width: $desktop) {
+    order: 2;
+  }
+}
+
+.contacts__item:nth-child(2) {
+  @media (min-width: $desktop) {
+    order: 3;
+  }
+}
+
+.contacts__container {
+  width: 280px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    width: 620px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 940px;
+  }
+}
+
+.contacts__header {
+  text-align: center;
+  font-family: "OpenSansLight", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #283645;
+  margin: 0;
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet) {
+    font-size: 40px;
+    height: 80px;
+    width: 570px;
+    padding-left: 23px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 50px;
+    height: 110px;
+    padding-left: 185px;
+  }
+}
+
+.contacts__bold {
+  margin: 0;
+  margin-bottom: 10px;
+  height: 14px;
+  font-family: "OpenSansBold", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #283645;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 35px;
+  }
+}
+
+.contacts__pink {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: #d22856;
+}
+
+.contacts__item {
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet) {
+    margin: 0 auto;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__item:last-child {
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+}

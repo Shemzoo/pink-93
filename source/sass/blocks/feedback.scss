@@ -1,0 +1,165 @@
+@import "../variables";
+@import "../mixins";
+
+.feedback {
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 112px;
+    background: url("../img/icon-quotes.svg") 50% 15% no-repeat;
+    margin-bottom: -1px;
+  }
+}
+
+.feedback__list {
+  @include list-styles-reset;
+  margin-bottom: 16px;
+
+  @media (min-width: $desktop) {
+    margin-top: 25px;
+    margin-bottom: 0;
+  }
+}
+
+.feedback__toggles {
+  margin-left: 13px;
+}
+
+.feedback__toggle {
+  @include button-styles-reset;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  line-height: 0;
+  width: 6px;
+  height: 6px;
+  margin-right: 15px;
+  background-color: #bec2c7;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.feedback__toggle:nth-child(1) {
+  width: 12px;
+  height: 12px;
+  border: 3px solid #283645;
+}
+
+.feedback__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback__author {
+  font-size: 18px;
+  font-family: "OpenSansBold", "Arial", sans-serif;
+
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    margin-top: 48px;
+    margin-bottom: 0;
+    order: 2;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.feedback__author-profession {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: inline;
+    order: 3;
+    height: 50px;
+    font-size: 14px;
+    line-height: 2.14;
+    color: #283645;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.feedback__quote {
+  font-size: 14px;
+  line-height: 2.14;
+  text-align: center;
+  color: #283645;
+  width: 280px;
+
+  @media (min-width: $tablet) {
+    width: 620px;
+    height: 79px;
+    font-size: 18px;
+    line-height: 1.67;
+    text-align: center;
+    color: #283645;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 21px;
+    line-height: 30px;
+    width: 726px;
+  }
+}
+
+.feedback__item {
+  text-align: center;
+
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.feedback__item--second,
+.feedback__item--third {
+  display: none;
+}
+
+.feedback__left,
+.feedback__right {
+  @include button-styles-reset;
+  cursor: pointer;
+}
+
+.feedback__left {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 79.5%;
+  }
+}
+
+.feedback__right {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 79.5%;
+  }
+}
